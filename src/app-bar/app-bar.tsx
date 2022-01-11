@@ -11,19 +11,23 @@ import { styled } from "@mui/material/styles";
 const AppRoute = styled(Typography)<TypographyProps>(({theme}) => ({
     paddingLeft: 25,
     paddingRight: 25,
-    color: "black",
+    color: "gray",
     '&:hover':{
-        transform: "scale(1.2,1.2)",
+        backgroundColor: 'gray',
         color: "white",
     }
 })
 );
 
 const StyledToolbar = styled(Toolbar)<ToolbarProps>(({theme}) => ({
-    justifyContent: "center",
-    backgroundColor: theme.palette.grey[500],
+    justifyContent: "flex-start",
+    backgroundColor: theme.palette.grey[900],
 })
 );
+
+const ToolbarSpacing = styled('div')(({ theme }) => ({
+    ...theme.mixins.toolbar,
+}));
 
 
 function AppBarFixed(): JSX.Element {
@@ -42,6 +46,7 @@ function AppBarFixed(): JSX.Element {
                 </AppRoute>
               </StyledToolbar>
             </AppBar>
+            <ToolbarSpacing></ToolbarSpacing>
         </div>
     )
 }
