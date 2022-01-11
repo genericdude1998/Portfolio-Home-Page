@@ -7,12 +7,14 @@ import { projects } from "../projects";
 function Showcase(){
     return(
         <div>
-            <Grid container spacing={4}>
+            <Grid container spacing={8}>
                 {projects.map(proj => (
                     <GridItem 
                         name={proj.name} 
                         desc={proj.desc} 
                         img={proj.img}
+                        github={proj.github}
+                        live={proj.live}
                     />
                     )
                 )}
