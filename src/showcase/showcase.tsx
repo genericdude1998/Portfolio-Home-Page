@@ -1,13 +1,21 @@
 import React from "react";
 import Grid from '@mui/material/Grid';
 import GridItem from "../grid-item/GridItem";
+import { GridProps } from "@mui/system";
+
+import { styled } from "@mui/system";
 
 import { projects } from "../projects";
+
+const StyledGrid = styled(Grid)<GridProps>(({theme}) => ({
+    backgroundColor: 'beige',
+    height: '100%',
+ }))
 
 function Showcase(){
     return(
         <div>
-            <Grid container spacing={8}>
+            <StyledGrid container spacing={10}>
                 {projects.map(proj => (
                     <GridItem 
                         name={proj.name} 
@@ -18,7 +26,7 @@ function Showcase(){
                     />
                     )
                 )}
-            </Grid>
+            </StyledGrid>
         </div>
     )
 }

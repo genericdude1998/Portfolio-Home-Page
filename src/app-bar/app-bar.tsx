@@ -6,15 +6,21 @@ import { stepClasses, Theme, ToolbarProps } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import { TypographyProps } from "@mui/material/Typography";
 
+import { Avatar } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { images } from "../../assets/images";
 
 const AppRoute = styled(Typography)<TypographyProps>(({theme}) => ({
     paddingLeft: 25,
     paddingRight: 25,
     color: "gray",
+    borderRadius: '20px',
     '&:hover':{
         backgroundColor: 'gray',
         color: "white",
+    },
+    [theme.breakpoints.down('sm')]:{
+      fontSize: '20px',
     }
 })
 );
@@ -26,7 +32,8 @@ const StyledToolbar = styled(Toolbar)<ToolbarProps>(({theme}) => ({
 );
 
 const ToolbarSpacing = styled('div')(({ theme }) => ({
-    ...theme.mixins.toolbar,
+    margin:'100px',
+    backgroundColor: 'beige',
 }));
 
 
@@ -35,15 +42,16 @@ function AppBarFixed(): JSX.Element {
         <div>
             <AppBar position="fixed" color="primary">
               <StyledToolbar>
-                <AppRoute variant="h6">
+                <AppRoute variant="h5">
                   Home
                 </AppRoute>
-                <AppRoute variant="h6">
+                <AppRoute variant="h5">
                   Showcase
                 </AppRoute>
-                <AppRoute variant="h6">
+                <AppRoute variant="h5">
                   Contact
                 </AppRoute>
+                <Avatar src={images.me} sx={{marginLeft: 'auto'}}/>
               </StyledToolbar>
             </AppBar>
             <ToolbarSpacing></ToolbarSpacing>

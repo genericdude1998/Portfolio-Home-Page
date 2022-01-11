@@ -13,7 +13,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import WebIcon from '@mui/icons-material/Web';
 
-import { styled } from "@mui/system";
+import { GridProps, styled } from "@mui/system";
 
 interface GridItemProps{
     name: string;
@@ -64,7 +64,9 @@ function GridItem(props: GridItemProps){
                     </CardActions>
 
                     <Collapse in={expanded}>
-                        {props.desc}
+                        <Typography variant="subtitle1" color="initial">
+                            {props.desc}
+                        </Typography>
                     </Collapse>
                 </StyledCard>
         </Grid>

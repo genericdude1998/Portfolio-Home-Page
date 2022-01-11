@@ -39,7 +39,7 @@ export const projects = [
     },
     {
         id:4,
-        name:'IKEA VR dissertation project',
+        name:'IKEA VR dissertation',
         desc: 'A fictional version of an IKEA showroom in VR for my dissertation project',
         img: images.NY,
         github: 'https://github.com/genericdude1998/IBDissertationExperiment',
