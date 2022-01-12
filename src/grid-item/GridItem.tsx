@@ -25,6 +25,7 @@ interface GridItemProps{
 
 const StyledCard = styled(Card)<CardProps>(({theme}) => ({
     padding: '10px',
+    fontSize: '30px',
 }))
 
 function GridItem(props: GridItemProps){
@@ -38,7 +39,7 @@ function GridItem(props: GridItemProps){
                 <StyledCard>
                     <CardMedia component="img" title="img" image={props.img} />
                     <CardContent>
-                        <Typography variant="h6" color="initial" textAlign={'center'}>
+                        <Typography variant="h4" color="initial" textAlign={'center'}>
                             {props.name}
                         </Typography>
                     </CardContent>
@@ -64,7 +65,7 @@ function GridItem(props: GridItemProps){
                     </CardActions>
 
                     <Collapse in={expanded}>
-                        <Typography variant="subtitle1" color="initial">
+                        <Typography variant="h6" color="initial">
                             {props.desc}
                         </Typography>
                     </Collapse>
