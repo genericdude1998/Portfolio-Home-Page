@@ -32,7 +32,7 @@ const StyledToolbar = styled(Toolbar)<ToolbarProps>(({theme}) => ({
 );
 
 const ToolbarSpacing = styled('div')(({ theme }) => ({
-    margin:'100px',
+    padding: '30px',
     backgroundColor: 'beige',
 }));
 
