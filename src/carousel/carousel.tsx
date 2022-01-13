@@ -7,7 +7,6 @@ import { styled } from "@mui/system";
 import { PaperProps, Typography } from "@mui/material";
 import { CarouselProps } from "react-material-ui-carousel/dist/components/types";
 import Showcase from "../showcase/showcase";
-import { CurrencyLira } from "@mui/icons-material";
 
 const StyledItem = styled(Paper)<PaperProps>(({theme}) => (
     {

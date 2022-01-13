@@ -6,8 +6,10 @@ import { GridProps } from "@mui/system";
 import { styled } from "@mui/system";
 
 import { projects, ProjectTypes, Project } from "../projects";
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, Collapse } from "@mui/material";
 import { CircularProgressProps } from "@mui/material";
+
+import { Grow } from "@mui/material";
 
 const StyledGrid = styled(Grid)<GridProps>(({theme}) => ({
     backgroundColor: 'beige',
@@ -33,7 +35,7 @@ function Showcase(props: ShowcaseProps){
 
         const timer = setTimeout(() => {
             setProjectsToShow(projects.filter(proj => proj.type === props.type || props.type === ProjectTypes.All));
-        }, 1000);
+        }, 10);
         return () => {
             clearTimeout(timer);
         }
@@ -42,6 +44,7 @@ function Showcase(props: ShowcaseProps){
     return(
         <div>
             {projectsToShow ? 
+            <Grow in={projectsToShow.length > 0} timeout={2000} >
                 <StyledGrid container spacing={10}>
                     {
                         projectsToShow.map(proj => (
@@ -55,7 +58,8 @@ function Showcase(props: ShowcaseProps){
                             )
                         ) 
                     }
-                </StyledGrid> :
+                </StyledGrid> 
+            </Grow> :
                 <div>
                     <Spinner thickness={5} size={100} color={'success'}/>
                 </div>
