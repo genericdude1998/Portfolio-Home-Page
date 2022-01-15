@@ -7,17 +7,19 @@ import Grid from '@mui/material/Grid';
 import { CardActionArea, CardActions, CardMedia, IconButton } from "@mui/material";
 import { CardProps } from "@mui/material";
 import { Collapse } from "@mui/material";
+import { CardMediaProps } from "@mui/material";
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import WebIcon from '@mui/icons-material/Web';
 
-import { GridProps, styled } from "@mui/system";
+import { styled } from "@mui/system";
 
 interface GridItemProps{
     name: string;
     img: string,
+    imgHover?:string,
     desc: string,
     github:string,
     live?: string,
@@ -26,18 +28,26 @@ interface GridItemProps{
 const StyledCard = styled(Card)<CardProps>(({theme}) => ({
     padding: '10px',
     fontSize: '30px',
+}));
+
+const StyledPicture = styled(CardMedia)<CardMediaProps>(({theme}) => ({
+    height: '300px',
 }))
 
 function GridItem(props: GridItemProps){
 
     const [expanded, setExpanded] = React.useState(false);
+    const [img, setImg] = React.useState(props.img);
 
     const setExpand = () => setExpanded(!expanded);
 
     return(
         <Grid item xs={12} sm={6} md={4}>
                 <StyledCard>
-                    <CardMedia component="img" title="img" image={props.img} />
+                    <StyledPicture title="img" image={img} 
+                        onMouseEnter={() => props.imgHover ? setImg(props.imgHover): null}
+                        onMouseLeave={() => setImg(props.img)}
+                    />
                     <CardContent>
                         <Typography variant="h4" color="initial" textAlign={'center'}>
                             {props.name}

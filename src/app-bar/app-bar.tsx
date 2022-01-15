@@ -9,6 +9,7 @@ import { TypographyProps } from "@mui/material/Typography";
 import { Avatar } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { images } from "../../assets/images";
+import { Link } from "react-router-dom";
 
 const AppRoute = styled(Typography)<TypographyProps>(({theme}) => ({
     paddingLeft: 25,
@@ -22,11 +23,11 @@ const AppRoute = styled(Typography)<TypographyProps>(({theme}) => ({
     [theme.breakpoints.down('sm')]:{
       fontSize: '20px',
     }
-})
-);
+}));
 
 const StyledToolbar = styled(Toolbar)<ToolbarProps>(({theme}) => ({
     justifyContent: "flex-start",
+    padding: '10px',
     backgroundColor: theme.palette.grey[900],
 })
 );
@@ -43,15 +44,23 @@ function AppBarFixed(): JSX.Element {
             <AppBar position="fixed" color="primary">
               <StyledToolbar>
                 <AppRoute variant="h5">
-                  Home
+                  <Link to={'/'} style={{textDecoration: 'none', color:'white'}}>
+                    <Typography variant={'h5'}>Home</Typography>
+                  </Link>
                 </AppRoute>
                 <AppRoute variant="h5">
-                  Showcase
+                <Link to={'/showcase'} style={{textDecoration: 'none', color:'white'}}>
+                    Showcase
+                  </Link>
                 </AppRoute>
                 <AppRoute variant="h5">
-                  Contact
+                <Link to={'/contact'} style={{textDecoration: 'none', color:'white'}}>
+                    Contact
+                  </Link>
                 </AppRoute>
-                <Avatar src={images.me} sx={{marginLeft: 'auto'}}/>
+                <Link to={'/contact'} style={{marginLeft: 'auto'}}>
+                  <Avatar src={images.me}/>
+                </Link>
               </StyledToolbar>
             </AppBar>
             <ToolbarSpacing></ToolbarSpacing>
