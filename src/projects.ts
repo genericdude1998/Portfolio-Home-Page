@@ -49,7 +49,7 @@ export const projects: Project[] = [
         github: 'https://github.com/genericdude1998/Social-Media-App-Portfolio',
         live: 'https://genericdude1998.github.io/Social-Media-App-Portfolio/',
         type:ProjectTypes.React,
-        tags: ['React', 'Redux', 'Jest', 'Enzyme', 'Cypress', 'CircleCI'],
+        tags: ['React', 'Redux', 'Jest', 'Enzyme', 'Cypress', 'CircleCI', 'CSSModules'],
     },
     {
         id:3,
