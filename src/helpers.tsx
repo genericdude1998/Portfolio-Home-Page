@@ -1,6 +1,6 @@
 import React from 'react';
 import {FaReact} from 'react-icons/fa';
-import {SiCypress, SiJest, SiRedux, SiStyledcomponents, SiTypescript, SiUnity} from 'react-icons/si';
+import {SiCircleci, SiCypress, SiJest, SiRedux, SiStyledcomponents, SiTypescript, SiUnity} from 'react-icons/si';
 import {Gi3DGlasses, GiInfinity} from 'react-icons/gi';
 import { SiCsharp } from 'react-icons/si';
 export function GetTagIcon(tag:string){
@@ -16,6 +16,7 @@ export function GetTagIcon(tag:string){
         case 'TypeScript': return <SiTypescript/>;
         case 'Procedural Generation': return <GiInfinity/>;
         case 'Unity': return <SiUnity/>;
+        case 'CircleCI': return <SiCircleci/>;
         default:
             break;
     }
