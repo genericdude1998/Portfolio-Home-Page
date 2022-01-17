@@ -4,10 +4,11 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { Box, Chip, CardActions, CardMedia, IconButton } from "@mui/material";
+import { Box, Chip, CardActions, CardMedia, IconButton, Button } from "@mui/material";
 import { CardProps } from "@mui/material";
 import { Collapse } from "@mui/material";
 import { CardMediaProps } from "@mui/material";
+import {Link} from '@mui/material';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -47,10 +48,12 @@ function GridItem(props: GridItemProps){
     return(
         <Grid item xs={12} sm={6} md={4}>
                 <StyledCard>
-                    <StyledPicture title="img" image={img} 
-                        onMouseEnter={() => props.imgHover ? setImg(props.imgHover): null}
-                        onMouseLeave={() => setImg(props.img)}
-                    />
+                    <Link href={props.live} target='_blank' rel="noreferrer noopener">
+                        <StyledPicture title="img" image={img} 
+                            onMouseEnter={() => props.imgHover ? setImg(props.imgHover): null}
+                            onMouseLeave={() => setImg(props.img)}
+                        />
+                    </Link>
                     <CardContent>
                         <Typography variant="h4" color="initial" textAlign={'center'}>
                             {props.name}
