@@ -4,7 +4,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { CardActionArea, CardActions, CardMedia, IconButton } from "@mui/material";
+import { Box, Chip, CardActions, CardMedia, IconButton } from "@mui/material";
 import { CardProps } from "@mui/material";
 import { Collapse } from "@mui/material";
 import { CardMediaProps } from "@mui/material";
@@ -15,14 +15,17 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import WebIcon from '@mui/icons-material/Web';
 
 import { styled } from "@mui/system";
+import { GetTagIcon } from "../helpers";
 
 interface GridItemProps{
+    id: number,
     name: string;
     img: string,
     imgHover?:string,
     desc: string,
     github:string,
     live?: string,
+    tags: string[],
 }
 
 const StyledCard = styled(Card)<CardProps>(({theme}) => ({
@@ -67,7 +70,12 @@ function GridItem(props: GridItemProps){
                                 : null
                             }
                         </CardActions>
-                        <CardActions>
+                        <CardActions >
+                            <Box>
+                                {props.tags.map((tag) => (
+                                    <Chip icon={GetTagIcon(tag)}label={tag} key={tag}/>
+                                ))}
+                            </Box>
                             <IconButton onClick={setExpand}>
                                 {expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />} 
                                 </IconButton>

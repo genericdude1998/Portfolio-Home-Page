@@ -60,6 +60,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
 
+  devServer: {
+    historyApiFallback: true,
+  },
+
   // Use the html plugin.
   plugins: [htmlPlugin],
 };

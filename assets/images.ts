@@ -2,7 +2,7 @@ import me from './me.jpg';
 import SM from './SocialMedia.jpg';
 import SMHover from './SocialMedia.gif';
 import BD from './BabelDrive.png';
-import BDHover from './BabelDrive.png';
+import BDHover from './BabelDriveShowcase.gif';
 import WA from './WeatherApp.jpg';
 import WAHover from './WeatherApp.gif';
 import RA from './RadarApproach.png';

@@ -50,12 +50,14 @@ function Showcase(props: ShowcaseProps){
                     {
                         projectsToShow.map(proj => (
                             <GridItem 
+                                id={proj.id}
                                 name={proj.name} 
                                 desc={proj.desc} 
                                 img={proj.img}
                                 imgHover={proj.imgHover}
                                 github={proj.github}
                                 live={proj.live}
+                                tags={proj.tags}
                             />
                             )
                         ) 

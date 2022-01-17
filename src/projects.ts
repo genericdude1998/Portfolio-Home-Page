@@ -1,5 +1,6 @@
 import { images } from "../assets/images"
 
+
 export enum ProjectTypes{
     'All',
     'React',
@@ -15,6 +16,7 @@ export interface Project{
     github: string,
     live?: string,
     type: number,
+    tags: string[],
 }
 
 export const projects: Project[] = [
@@ -25,6 +27,7 @@ export const projects: Project[] = [
         img: images.background,
         github: 'https://github.com/genericdude1998/Weather-App-Typescript-Portfolio/tree/master',
         type:ProjectTypes.React,
+        tags: ['React', 'MaterialUI', 'TypeScript'],
     },
     {
         id:0,
@@ -35,6 +38,7 @@ export const projects: Project[] = [
         live: 'https://genericdude1998.github.io/Weather-App-Typescript-Portfolio/',
         github: 'https://github.com/genericdude1998/Weather-App-Typescript-Portfolio/tree/master',
         type: ProjectTypes.React,
+        tags: ['React', 'StyledComponents', 'TypeScript'],
     },
     {
         id:1,
@@ -45,6 +49,7 @@ export const projects: Project[] = [
         github: 'https://github.com/genericdude1998/Social-Media-App-Portfolio',
         live: 'https://genericdude1998.github.io/Social-Media-App-Portfolio/',
         type:ProjectTypes.React,
+        tags: ['React', 'Redux', 'Jest', 'Enzyme', 'Cypress'],
     },
     {
         id:3,
@@ -53,7 +58,8 @@ export const projects: Project[] = [
         img: images.Babel,
         imgHover: images.BabelHover,
         github: 'https://github.com/genericdude1998/Babel3DFolderExplorer',
-        type: ProjectTypes.Unity
+        type: ProjectTypes.Unity,
+        tags: ['Unity', 'Procedural Generation', 'C#'],
     },
     {
         id:4,
@@ -62,7 +68,8 @@ export const projects: Project[] = [
         img: images.RadarApproach,
         imgHover: images.RadarApproachHover,
         github: 'https://github.com/genericdude1998/Radar-Approach-Unity',
-        type: ProjectTypes.Unity
+        type: ProjectTypes.Unity,
+        tags: ['Unity', 'C#'],
     },
     {
         id:4,
@@ -71,6 +78,7 @@ export const projects: Project[] = [
         img: images.DissRoom,
         imgHover: images.DissBed,
         github: 'https://github.com/genericdude1998/IBDissertationExperiment',
-        type: ProjectTypes.Unity
+        type: ProjectTypes.Unity,
+        tags: ['Unity', 'C#', 'VR'],
     }
 ]
