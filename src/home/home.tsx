@@ -32,6 +32,13 @@ const StyledSubTitle = styled(Typography)<TypographyProps>(({theme}) => ({
     position: 'absolute',
     top: '40%',
     whiteSpace: 'nowrap',
+    paddingRight: '5px',
+    paddingLeft: '5px',
+    '&:hover':{
+        color:'black',
+        borderRadius: '20px',
+        backgroundColor: 'beige',
+    },
 }));
 
 function Home(){
@@ -41,10 +48,9 @@ function Home(){
         <Fade in={true} timeout={4000}>
             <Container>
                 <StyledTitle variant="h1" color="white">Welcome to my Portfolio</StyledTitle>
-                <StyledSubTitle variant="h4" color="white">Check the {' '} 
-                <Link to={'/showcase'} style={{textDecoration:'none', color: 'white', fontWeight: 10,}}>
-                    Showcase
-                </Link></StyledSubTitle>
+                    <Link to={'/showcase'} style={{textDecoration:'none', color: 'white', fontWeight: 10,}}>
+                        <StyledSubTitle variant="h4" color="white">Check the Showcase!</StyledSubTitle>
+                    </Link>
             </Container>
         </Fade>
     </Background>

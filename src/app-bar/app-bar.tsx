@@ -1,19 +1,19 @@
 import React from "react";
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import { stepClasses, Theme, ToolbarProps } from "@mui/material";
+import { ToolbarProps } from "@mui/material";
 
 import Typography from '@mui/material/Typography';
 import { TypographyProps } from "@mui/material/Typography";
 
+import { images } from "../../assets/images";
 import { Avatar } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { images } from "../../assets/images";
 import { Link } from "react-router-dom";
 
 const AppRoute = styled(Typography)<TypographyProps>(({theme}) => ({
-    paddingLeft: 25,
-    paddingRight: 25,
+    paddingLeft: '50px',
+    paddingRight: '50px',
     color: "gray",
     borderRadius: '20px',
     '&:hover':{
@@ -54,12 +54,12 @@ function AppBarFixed(): JSX.Element {
                   </Link>
                 </AppRoute>
                 <AppRoute variant="h5">
-                <Link to={'/contact'} style={{textDecoration: 'none', color:'white'}}>
+                  <Link to={'/contact'} style={{textDecoration: 'none', color:'white'}}>
                     Contact
                   </Link>
                 </AppRoute>
                 <Link to={'/contact'} style={{marginLeft: 'auto'}}>
-                  <Avatar src={images.me}/>
+                  <Avatar src={images.faceme}/>
                 </Link>
               </StyledToolbar>
             </AppBar>

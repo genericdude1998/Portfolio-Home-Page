@@ -1,4 +1,5 @@
-import me from './me.jpg';
+import me from './Cropped Me.jpg';
+import Faceme from './Face me.jpg';
 import SM from './SocialMedia.jpg';
 import SMHover from './SocialMedia.gif';
 import BD from './BabelDrive.png';
@@ -13,6 +14,7 @@ import background from '../assets/backgroundPortfolio.jpg';
 
 export const images = {
     me: me,
+    faceme: Faceme,
     SocialMedia: SM,
     SocialMediaHover: SMHover,
     Babel: BD,
