@@ -58,7 +58,7 @@ module.exports = {
   // and where it should be palced.
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
   },
 
   devServer: {
