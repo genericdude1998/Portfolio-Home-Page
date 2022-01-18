@@ -58,7 +58,6 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "build"),
-    publicPath: 'https://genericdude1998.github.io/Portfolio-Home-Page/'
   },
 
   devServer: {
