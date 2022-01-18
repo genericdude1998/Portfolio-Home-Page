@@ -32,9 +32,10 @@ function Contact(){
             <Typography variant="h3" color="initial">About me</Typography>
             <StyledAvatar src={images.me}/>
             <Typography variant="h6" color="initial" 
-                sx={{marginTop: '10px', width:'50vw', textAlign: 'center'}}>
-                I am a self-taught React developer eager to explore the latest technology in front-end development. 
-                <br/>I am always looking for a new challenge!
+                sx={{marginTop: '10px', width:'50vw', textAlign: 'center', fontWeight: 'normal'}}>
+                A React Developer eager to explore the latest technologies in Front-End development and Virtual Reality
+                <br/>
+                A serial problem solver who loves disentagling issues and coming up with creative solutions 
             </Typography>
             <StyledContactBar>
                 <IconButton href={'https://github.com/genericdude1998'} size='large' target='_blank' rel="noreferrer noopener">
