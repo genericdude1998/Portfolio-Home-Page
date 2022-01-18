@@ -14,7 +14,6 @@ module.exports = {
   // Our application entry point.
   entry: "./src/index.tsx",
   devtool: 'source-map',
-  
   // These rules define how to deal 
   // with files with given extensions.
   // For example, .tsx files 
@@ -59,6 +58,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "build"),
+    publicPath: '/',
   },
 
   devServer: {
