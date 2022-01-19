@@ -3,7 +3,7 @@ import AppBarFixed from './app-bar/app-bar';
 import AppCarousel from './carousel/carousel';
 import Showcase from './showcase/showcase';
 import {GlobalStyles} from '@mui/material';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, HashRouter} from 'react-router-dom';
 import Home from './home/home';
 import Contact from './contact/contact';
 
@@ -16,7 +16,7 @@ function App (props: IAppProps): JSX.Element{
     return (
         <>
             <GlobalStyles styles={{body:{margin: '0px', backgroundColor: 'beige'}}} />
-            <Router>
+            <HashRouter basename={'/'}>
                 <Routes>
                     <Route path={'/'} element={
                         <>
@@ -41,7 +41,7 @@ function App (props: IAppProps): JSX.Element{
                     }>
                     </Route>
                 </Routes>
-            </Router>
+            </HashRouter>
         </>
     )
 }

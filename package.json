@@ -1,12 +1,12 @@
 {
   "name": "home-page-portfolio",
-  "homepage": ".",
+  "homepage": "http://genericdude1998.github.io/Portfolio-Home-Page",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "webpack",
+    "build": "webpack --mode development",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
